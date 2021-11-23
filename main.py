@@ -34,9 +34,7 @@ Bot = Client(
 )
 
 START_TEXT = """
-Hello {}, I am a channel auto post telegram bot.
-
-Made by @FayasNoushad
+Hello {}, I am a channel auto post telegram bot
 """
 START_BUTTONS = InlineKeyboardMarkup(
         [[
@@ -52,8 +50,8 @@ START_BUTTONS = InlineKeyboardMarkup(
 async def start(bot, update):
     await update.reply_text(
         text=START_TEXT.format(update.from_user.mention),
-        disable_web_page_preview=True,
-        reply_markup=START_BUTTONS
+        disable_web_page_preview=True
+        #reply_markup=START_BUTTONS
     )
 
 
